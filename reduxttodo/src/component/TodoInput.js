@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import { addTodo } from '../redux/action'
-import {v1 as uuid} from 'uuid'
+import {v1} from 'uuid'
 import {useDispatch} from 'react-redux'
 function TodoInput() {
     const[name,setName]=useState()
@@ -17,11 +17,12 @@ function TodoInput() {
                    <button  onClick={()=>{
                       dispatch (addTodo(
                            {
-                             id:uuid(),
-                             name:name
+                             id:v1(),
+                             name:name,
+                             status:false
                            }
                         )
-                      )
+                     )
                            setName('')
                          }} 
                          className="btn btn-dark m-2">Add</button>

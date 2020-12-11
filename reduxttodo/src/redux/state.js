@@ -1,15 +1,25 @@
 export  let todos=[
     {
         id:1,
-        name:"Raj"
+        name:"Raja",
+        status:false
     },
     {
         id:2,
-        name:"Raja"
+        name:"Rani",
+        status:false
+
     },
     {
         id:3,
-        name:"Rajyo"
+        name:"Gulam",
+        status:false
+
+    },
+    {
+        id:4,
+        name:"Joker",
+        status:false
     }
     
    
