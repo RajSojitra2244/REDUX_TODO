@@ -1,5 +1,5 @@
 
-import{ADD_TODO,DELETE_TODO,UPDATE_TODO,Edit_TODO} from './action'
+import{ADD_TODO,DELETE_TODO,UPDATE_TODO,Edit_TODO,Open_Modal} from './action'
 import {todos} from './state'
 
 
@@ -9,7 +9,7 @@ export let reducer=(state = todos,action)=>{
         case ADD_TODO:
              newtodo=[...state]
             newtodo.push(action.payload)
-            localStorage.setItem('TODO', JSON.stringify(newtodo))
+            // localStorage.setItem('TODO', JSON.stringify(newtodo))
             return newtodo
         case DELETE_TODO:
             newtodo =[...state]
@@ -25,18 +25,19 @@ export let reducer=(state = todos,action)=>{
           //     ...newtodo,
           //   ]
           //   return state
-
           // })
+
             // console.log(dummytodo);
 
-              const Index = newtodo.findIndex((data)=>{ return data.id == action.payload.id})
-              newtodo[Index].status = true
-              if(Index>-1){
-                state = [
-                  ...newtodo,
-                ]
-              }
-              return state
+              // const Index = newtodo.findIndex((data)=>{ return data.id == action.payload.id})
+              // newtodo[Index].status = true
+              // if(Index>-1){
+              //   state = [
+              //     ...newtodo,
+              //   ]
+              // }
+              // return state
+       
 
         case UPDATE_TODO:
           newtodo = [...state]

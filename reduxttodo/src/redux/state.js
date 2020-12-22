@@ -24,3 +24,5 @@ export  let todos=[
     
    
 ]
+
+export let modal = false

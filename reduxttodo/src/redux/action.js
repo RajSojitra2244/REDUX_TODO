@@ -2,6 +2,9 @@
  export const DELETE_TODO="DELETE_TODO"
  export const UPDATE_TODO="UPDATE_TODO"
  export const Edit_TODO="Edit_TODO"
+ export const Open_Modal="Edit_TODO"
+ export const Close_Modal="Close_Modal"
+
 
 
 export function addTodo(todo){
@@ -30,3 +33,12 @@ export function updateTodo(todo){
         payload:todo
     }
 }
+
+export function openmodal(value){
+    return{
+        type:Open_Modal,
+        payload:value
+    }
+}
+
+
